@@ -42,7 +42,7 @@ How to handle?
 But class load times becaomes slow - > and 
 
 P1 --- application startup time increases
-
+`
 Eager loading - our case - create in advance - even before application runs!
 Lazy loading - earlier cases! - creating attributes when. needed
 Problem - conc urrency
