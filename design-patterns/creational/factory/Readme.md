@@ -23,7 +23,7 @@ what is "Factory" ? create a new object of class based on some parameter!
 # What is FM DP?
 - use case: We might need to get one object from some other corresponding object (DB->Query)
 - A method in a class that returns nothing but the method of corresponding class - factory method! -> here createQuery!
-- In builder design pattern -> get Builder - was it factory? Why?
+?? - In builder design pattern -> get Builder - was it factory? Why?
 
 If a class has a method which does nothing except give you an associated object of another class -> factory method
 If it wasn't present -> SRP and OCP violated.
@@ -44,9 +44,11 @@ How will our code look like or change?
 What if some other functionality other than queries also required?
 
 SRP would be violated! setUrl, setHostName, setConfig. .. etc is fine but the other functionalities dont!
-Breakup the classes -> the second set are abstract factory methods: createQuery, createTransaction...etc
+Breakup the classes -> 
+the second set are abstract factory methods: createQuery, createTransaction...etc
 if a class starts having alot of factory methods -> violation of SRP -> put all methods in seperate class!
-comment : Interface segrergation of two classes? what was that???? in prev class
+
+comment : Interface segrergation of two classes? what was that?
 -----------------------------------------------------------------------------------------------------------------------------------------
 So now we have two classes:
 interface DB{}

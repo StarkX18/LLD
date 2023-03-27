@@ -19,13 +19,12 @@ eg Scaler student
 1. grad_year<2022
 2. email, name and phone number
 *3. validations of combination attributes - grad_yr-age>1990 etc
-
 --------------------------------------------------------------------------------------------------------------------------
 How CAN we do this?
 
 1. In constructor : throw exceptions in constructor after validating!
    - problem - object is ALREADY created (not mentioned) in 1st line of constructor.
-    - But if you throw exception - the xcreated object is not reall assigned aqnd ois then collected by GC!
+   - But if you throw exception - the xcreated object is not reall assigned aqnd ois then collected by GC!
 
 2. static method - class itself WONT do the validation but some outer fxn - like either client side etc!
 - might or might NOT be a good idea - so not generalisable
@@ -34,7 +33,6 @@ How CAN we do this?
 - called AFTER an  object is created, first of all
 - what for the case of multiple attribute validation?
 - if we want class to be immutable? cant use this! as setters are NOT created for such classes (along with pvt attributes)
-
 --------------------------------------------------------------------------------------------------------------------------
 * Too many attributes - 
 
@@ -54,13 +52,11 @@ Solution?
    constructor is called?
 
 Basically not even a single problem is solved!
-
 --------------------------------------------------------------------------------------------------------------------------
 # Takeaways:
 
 1. Whatever validation - do before object creation.
 2. The solution of telescopic constructor made client code unreadable!
-
 --------------------------------------------------------------------------------------------------------------------------
 # Problems:
 
@@ -69,14 +65,12 @@ Basically not even a single problem is solved!
 3. Lots of nulls
 
 To solve it: in the constructor ->
-
 1. We need values to be recognisable!
 2. Allows you to pass multiple values!
 
 HashMap : everything is an object! There are object variations of the primitive types too!
 Eg Student(Map<String, Object>Args); 
 --------------------------------------------------------------------------------------------------------------------------
-
 Problem with map:
 
 1. Type safety - which will happen at runtime - if you self implement otherwwise not. This should ideally automatically happen at compile time!
@@ -93,14 +87,12 @@ Any language construct that supports this stuff? YES
 Class! It can help with all the stuff -> Helper/Builder class!
 Student s = new Student(Helper);
 --------------------------------------------------------------------------------------------------------------------------
-
 // ideally your codebase should be so elegant - that you keep drooling over :P
 
 Problems:
 1. To create main obj, you firwst neeed to create another object.
 2. client can call main constructor with null as well!
-     - will keep happening as long as the builder 
-        constructor is public   
+     - will keep happening as long as the builder constructor is public   
 
 Solution:
 - make the constructor of main object private
@@ -135,9 +127,7 @@ important points:
 1. public static builder 
 2. all setter methods return Builder object - here "this" -> makes the code beautiful, rather conversational!
 3. take care of getBuilder and the validation wrapper
-
 -------------------------------------------------------------------------------------------------------------------------------
-
 When to use builder?
 1. Class with too many attributes
 2. Immutable class with many attributes - ALWAYS and STRICtzly
@@ -149,34 +139,26 @@ Professional examples:
 
 Practical example:
 Firebase: API reference - 87 builders
-
 -------------------------------------------------------------------------------------------------------------------------------
 RequestConfiguration
 1. No setters in main class - coz immutable.
 2. methodNames should ideally be verbs
 
 Builders should ideally own validations, preprocessing etc...
-
 -------------------------------------------------------------------------------------------------------------------------------
-DIY:
+# DIY
 
 1. Read about builder from refactoring.guru - 
     - https://refactoring.guru/design-patterns/builder
     - codebase in other languages too!
 2. Implement builder in primary language + Java
 3. Explore Firebase API and find why builders were used?
-4. statuc and ionner classes (optional) 
-
+4. statuc and inner classes (optional) 
+5. https://refactoring.guru/design-patterns/builder/csharp/example
+6. https://firebase.google.com/docs/reference
 -------------------------------------------------------------------------------------------------------------------------------
 Cons - Singleton Design Pattern :
 
 1. Makes testing difficult - while mocking or stuff
 2. <optional> people wrap global variables in these classes - but not exactly a use case for singleton - so here the problem is with you!
-
--------------------------------------------------------------------------------------------------------------------------------
-
-DIY:
-https://refactoring.guru/design-patterns/builder/csharp/example
-https://refactoring.guru/design-patterns/builder
-https://firebase.google.com/docs/reference
 -------------------------------------------------------------------------------------------------------------------------------
