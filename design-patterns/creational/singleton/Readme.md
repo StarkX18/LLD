@@ -48,7 +48,7 @@ Still a problem: concurrency is a bitch!
 How to handle?
 1.  set the static ptr to new object at class load time -> even before a constructor is called!
 -> even handles concurrency!
-But class load times becomes slow - > and 
+But class load times becomes slow.
 
 P1 --- application startup time increases
 Eager loading - our case - create in advance - even before application runs!
@@ -100,7 +100,6 @@ Converting an object into a stream of bytes / and back.
 python: pickle - save ML models.
 
 Issue: existence of two objects at the same time!
-
 --------------------------------------------------------------------------------------------------------------------------
 Solution:: Learn how to implement singletons using enums
 
@@ -114,17 +113,4 @@ https://stackoverflow.com/questions/137975/what-are-drawbacks-or-disadvantages-o
 https://refactoring.guru/design-patterns/singleton
 https://github.com/Naman-Bhalla/lldSept2022/tree/master/src/main/java/designpatterns/singleton
 https://twitter.com/Piwai/status/1530057291549921282/photo/1
-
---------------------------------------------------------------------------------------------------------------------------
-
-how to implement: steps
-Add a private static field to the class for storing the singleton instance.
-
-Declare a public static creation method for getting the singleton instance.
-
-Implement “lazy initialization” inside the static method. It should create a new object on its first call and put it into the static field. The method should always return that instance on all subsequent calls.
-
-Make the constructor of the class private. The static method of the class will still be able to call the constructor, but not the other objects.
-
-Go over the client code and replace all direct calls to the singleton’s constructor with calls to its static creation method.
 --------------------------------------------------------------------------------------------------------------------------

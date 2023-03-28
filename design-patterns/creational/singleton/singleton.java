@@ -1,7 +1,6 @@
 // eager loading
 class singleton {
     private static singleton instance = new singleton();
-
     private singleton(){
         System.out.println("Singleton created");
     }
@@ -13,7 +12,6 @@ class singleton {
 // lazy loading - with concurrency issues
 class singleton{
     private static singleton instance = null;
-    
     private singleton(){
         System.out.println("Singleton created");
     }
@@ -39,14 +37,5 @@ class singleton{
      if two threads - t1 and t2 - call getInstance() at the same time,
      handle by using in-built java synchronized keyword.
     */
-    public static getInstance(){
-        if(instance == null){
-            synchronized(singleton.class){
-                if(instance == null){
-                    instance = new singleton();
-                }
-            }
-        }
-        return instance;
-    }
+    
 }
