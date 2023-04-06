@@ -3,7 +3,7 @@ UML Diagrams:
 Agenda - 
 1. class diagram
 2. use case diagram
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 UML diagrams:
 
 SDE pain points -
@@ -18,7 +18,6 @@ pics > words.
 but technical communication isnt art -> standards help our cause -> so no misinterpretation
 
 UML -> Unified Modelling Language
--------------------------------------------------------------
 - Allows to represent things uniformly
 - standardization on how to represent diff SWE concepts via diagrams
 - multiple types for multiple things
@@ -26,20 +25,19 @@ UML -> Unified Modelling Language
 Types:
 - structural: how a codebase is structured
 - behavioural: how a system behaves
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 Structural UML:
 
 **1. class
 2. package digram
 3. object
 *4. component
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 Behavioural UML:
 **1. Use Case
 *2. Activity
 *3. Sequence Diagram
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 Use Case :
 1. Different features and functionalities provided  
      in  a software system.
@@ -53,7 +51,7 @@ Use Case :
      use case - nouns
 4. <arrow> includes - see again
 5. <specific/child to generic/parent arrow> extends - fxnality where there would be multiple variants
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 DIY:
 
 create a use case diagram for scaler:
@@ -65,12 +63,10 @@ create a use case diagram for scaler:
 5. no login use case
 
 https://miro.com/app/board/uXjVP303sjM=/?share_link_id=492449005590
-
 class diagram - more important, much easier
-
 problem statement- represent diff entities in the software system.
 represent relations between diff entities : is-a, has-a
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 How to represent entities:
 see video
 
@@ -85,27 +81,20 @@ methods,
 interfaces,
 abstract classes,
 enum
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 representing relations between entities - 
 2 types of relations - 
 
 IS-A : inheritance : child is also a parent : child extends parents + also interface implementation...
-
 HAS-A : association: have an attribute of another class...
 
 Representing Inheritance: arrow from child to parent, class to interface etc
-
-Representing association <arrow ending in rhombus>: two types again - 
-composition (strong association) <solid rhombus> and agggregation (weak association)<empty rhombus>
-
+Representing Association <arrow ending in rhombus>: two types again - composition (strong association) <solid rhombus> and agggregation (weak association)<empty rhombus>
 Aggregation : collecting the other entiites which existewd and made sense even without you.
 
-Composition: opp of aggregation : eg shows -> tickets : tickets HAVE to be associated with a show
-
-
+Composition: opp of aggregation : eg shows -> tickets : tickets HAVE to be associated with a show. 
 Hence a simple question to decide:
-
-If A->B
-and B doesnt make sense without A - compostiioin
+If A->B and B doesnt make sense without A - composition.
 
 https://miro.com/app/board/uXjVP303sjM=/?share_link_id=492449005590
+-----------------------------------------------------------------------------------------------------------------------------------------

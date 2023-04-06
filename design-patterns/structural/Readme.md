@@ -12,5 +12,4 @@ Structural DPs:
 - how to structure your codebase
 - attricbutes and methods?
 - how diff classes talk to each other...
-
 -----------------------------------------------------------------------------------------------------------------------------------------
