@@ -1,4 +1,28 @@
-// eager loading
+/*
+    singleton design pattern - 
+    1. only one instance of the class should exist
+    2. global access to the instance
+    3. lazy loading
+    4. thread safe
+
+    Singleton pattern is used for logging, drivers objects, caching and thread pool.
+    Singleton design pattern is also used in other design patterns like Abstract Factory, Builder, Prototype, Facade etc.
+    
+    Common steps across approaches:
+    1. create a private constructor
+    2. create a private static instance of the class
+    3. create a public static method to return the instance
+
+    #1 eager loading - pre-load the object at the time of class loading
+    pros:
+    1. thread safe
+    2. easy to implement
+    
+    cons:
+    1. instance is created even if it is not used
+    2. can't do dynamic configurations of the singleton object, during runtime 
+*/
+
 class singleton {
     private static singleton instance = new singleton();
     private singleton(){
@@ -9,7 +33,16 @@ class singleton {
     }
 }
 
-// lazy loading - with concurrency issues
+/*
+    lazy loading - with concurrency issues - load the object when it is required
+    pros:
+    1. instance is created only when it is required
+    2. dynamic configurations of the singleton object, during runtime
+    
+    cons:   
+    1. not thread safe
+    2. relatively complex(elusive) to implement
+*/
 class singleton{
     private static singleton instance = null;
     private singleton(){
@@ -27,7 +60,26 @@ class singleton{
     }
 }
 
-// lazy loading - without concurrency issues
+/* 
+    lazy loading - without concurrency issues - load the object when it is required
+
+    how to implement: what's different this time?
+    1. private static instance is initialized with null
+    2. double check locking mechanism is used
+    3. synchronized keyword is used
+
+    pros:
+    1. instance is created only when it is required
+    2. dynamic configurations of the singleton object, during runtime
+    3. thread safe
+
+    cons:
+    1. relatively complex(elusive) to implement
+    2. relatively slow plus synchronized keyword is relatively expensive - synchronized keyword can reduce performance by a factor of 100
+    3. only one thread can access the method at a time
+    4. synchronized keyword can cause deadlocks
+*/
+
 class singleton{
     private static singleton instance = null;
     private singleton(){
@@ -37,5 +89,14 @@ class singleton{
      if two threads - t1 and t2 - call getInstance() at the same time,
      handle by using in-built java synchronized keyword.
     */
-    
+    public static getInstance(){
+        if(instance == null){
+            synchronized(singleton.class){
+                if(instance == null){
+                    instance = new singleton();
+                }
+            }
+        }
+        return instance;
+    }
 }
