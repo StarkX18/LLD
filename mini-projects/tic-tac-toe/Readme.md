@@ -28,7 +28,7 @@ interview metrics:
 2. atleast something runs! 
       - not all requirements -> finish ONE AT A TIME -> not parallel
       - code all the models (classes in diagrams)
------------------------------------------------------------------------------------------------------------------------------------------
+
 Running code is important!
 
 Model controllers and services - project structure
@@ -51,7 +51,7 @@ controller/ - waiter classes
 Django springboot js express 
 
 follows conventions across all languages
-
+-----------------------------------------------------------------------------------------------------------------------------------------
 Design tic tac toe:
 
 #0: overview - align with problem and its type :
@@ -109,7 +109,6 @@ next step -> use case diagram: only web apps
 next step -> class diagram! - 
 
 nouns or visualisation - outer to inner 
-
 for games: visualisation is always better
 
 class Board {
@@ -123,7 +122,6 @@ class Cell {
       bool iBlocked.  /// but not serving this rqmt plus no bool
      int cell state // improv over isBloclked just in case
 }
-
 
 class Player{
      - symbol
@@ -147,6 +145,7 @@ class Game {
 
 In class diagram you ALSO tell about design patterns!
 
+-----------------------------------------------------------------------------------------------------------------------------------------
 #1. Game - singleton? no - multiple games might or might not be running concurrently!
 
 ** insight: when will you get list of players?
@@ -157,7 +156,7 @@ when game begins? YES! so when game object created!
 
 so game ois a class has too many attributes, and also validations before object created!
 hence: builder!
------------------------------------------------------------------------------------------------------------------------------------------
+
 suggestions: 
 flyweight to store lightweight player? 
 - flyweght is used for repeated attributes! so NO
