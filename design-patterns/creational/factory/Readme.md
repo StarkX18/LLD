@@ -3,7 +3,7 @@
 1. Factory method design pattern
 2. Abstract factory design pattern
 3. (unofficial) Practical FP DP
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 Factory Method Design Pattern:
 
 Eg - simple user service 
@@ -17,9 +17,8 @@ Eg - simple user service
 
 Violates SRP as well as OCP! -> will you change it everywhere? where everywhere?
 - purpose of createQuery - based on DB type: create a query object...
------------------------------------------------------------------------------------------------------------------------------------------
 what is "Factory" ? create a new object of class based on some parameter!
-
+------------------------------------------------------------------------------------------------------------------------------
 # What is FM DP?
 - use case: We might need to get one object from some other corresponding object (DB->Query)
 - A method in a class that returns nothing but the method of corresponding class - factory method! -> here createQuery!
@@ -27,11 +26,11 @@ what is "Factory" ? create a new object of class based on some parameter!
 
 If a class has a method which does nothing except give you an associated object of another class -> factory method
 If it wasn't present -> SRP and OCP violated.
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 Dependency Injection!
 Factory method thus prevents you from storing the mapping between two classes  in a third external class.
 See code sample!
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 New real problem statement :
 
 On the client side, do we need to cast Query?

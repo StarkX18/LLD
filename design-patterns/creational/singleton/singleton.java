@@ -17,7 +17,8 @@
     pros:
     1. thread safe
     2. easy to implement
-    
+    3. If dynamic configs are NOT a problem - stick with the solution!
+
     cons:
     1. instance is created even if it is not used
     2. can't do dynamic configurations of the singleton object, during runtime 
@@ -74,9 +75,9 @@ class singleton{
     3. thread safe
 
     cons:
-    1. relatively complex(elusive) to implement
+    1. relatively harder to implement
     2. relatively slow plus synchronized keyword is relatively expensive - synchronized keyword can reduce performance by a factor of 100
-    3. only one thread can access the method at a time
+    3. only one thread can access the method at a time - only the first case is helpful, the rest times sync adds additional overhead
     4. synchronized keyword can cause deadlocks
 */
 
@@ -91,7 +92,9 @@ class singleton{
     */
     public static getInstance(){
         if(instance == null){
+            // what to use inside synchronized parentheses?
             synchronized(singleton.class){
+                // double check locking - in case two threads arrive just outside sync at the same time
                 if(instance == null){
                     instance = new singleton();
                 }
@@ -100,3 +103,15 @@ class singleton{
         return instance;
     }
 }
+
+/*
+    addressing problems with synchronised keyword:
+    # suggestions:
+    1. volatile variable
+    2. static helper class
+
+    # another problem: serialization and deserialization
+
+    # Actual solution to solve everything:
+    => singleton using enum
+*/
