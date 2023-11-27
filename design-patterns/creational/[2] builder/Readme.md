@@ -1,6 +1,6 @@
 Recap :  singleton
 What - a class somehow allows creation of only one instance
-Why - we don't need multiple objects - idk why - vheck again!
+Why - we don't need multiple objects - idk why - check again!
 --------------------------------------------------------------------------------------------------------------------------
 # How? 
 1. lazy loading - with if cases -> cant handle concurrency.

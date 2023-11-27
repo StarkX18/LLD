@@ -15,7 +15,7 @@ volatile variable??? => https://www.geeksforgeeks.org/volatile-keyword-in-java/
     - it also has very limited use-cases.
 
 Issue: existence of two objects at the same time!
-----------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 Solution:: Learn how to implement singletons using enums
 
 homework:
@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/137975/what-are-drawbacks-or-disadvantages-o
 https://refactoring.guru/design-patterns/singleton
 https://github.com/Naman-Bhalla/lldSept2022/tree/master/src/main/java/designpatterns/singleton
 https://twitter.com/Piwai/status/1530057291549921282/photo/1
-----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 resources:
 enums in java:
 - https://www.geeksforgeeks.org/enum-in-java/
@@ -79,4 +79,4 @@ singletons with enum:
 - The final clone method in Enum ensures that enum constants can never be cloned, and the special treatment by the serialization mechanism ensures that duplicate instances are never created as a result of deserialization. 
 - Reflective instantiation of enum types is prohibited. 
 - Together, these four things ensure that no instances of an enum type exist beyond those defined by the enum constants.
-------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------

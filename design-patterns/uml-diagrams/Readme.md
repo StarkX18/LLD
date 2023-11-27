@@ -3,18 +3,15 @@ UML Diagrams:
 Agenda - 
 1. class diagram
 2. use case diagram
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 UML diagrams:
 
 SDE pain points -
 hard skill - coding
 soft skill - communication
-
 Sample SDE - code review, architect, manager etc
 
-pics > words.
-"a picture is worth a thousand words"
-
+pics > words : "a picture is worth a thousand words"
 but technical communication isnt art -> standards help our cause -> so no misinterpretation
 
 UML -> Unified Modelling Language
@@ -25,19 +22,18 @@ UML -> Unified Modelling Language
 Types:
 - structural: how a codebase is structured
 - behavioural: how a system behaves
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 Structural UML:
-
-**1. class
+1. class
 2. package digram
 3. object
-*4. component
------------------------------------------------------------------------------------------------------------------------------------------
+4. component
+------------------------------------------------------------------------------------------------------------------------------
 Behavioural UML:
-**1. Use Case
-*2. Activity
-*3. Sequence Diagram
------------------------------------------------------------------------------------------------------------------------------------------
+1. Use Case
+2. Activity
+3. Sequence Diagram
+------------------------------------------------------------------------------------------------------------------------------
 Use Case :
 1. Different features and functionalities provided  
      in  a software system.
@@ -45,13 +41,11 @@ Use Case :
 
 5 concepts:
 1. <rectangle> system boundary - in and out.
-2. <oval> use case - fxn/ft/action/service that is 
-     provided - verbs generally
-3. <stick diagram> actor - someone who uses our 
-     use case - nouns
+2. <oval> use case - fxn/ft/action/service that is provided - verbs generally
+3. <stick diagram> actor - someone who uses our use case - nouns
 4. <arrow> includes - see again
-5. <specific/child to generic/parent arrow> extends - fxnality where there would be multiple variants
------------------------------------------------------------------------------------------------------------------------------------------
+5. <specific/child to generic/parent arrow> extends - functionality where there would be multiple variants
+------------------------------------------------------------------------------------------------------------------------------
 DIY:
 
 create a use case diagram for scaler:
