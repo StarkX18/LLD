@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/LLD.iml" filepath="$PROJECT_DIR$/.idea/LLD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-patterns/behaviouralDP/behaviouralDP.iml" filepath="$PROJECT_DIR$/design-patterns/behaviouralDP/behaviouralDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-patterns/creationalDP/builder-1/builder-1.iml" filepath="$PROJECT_DIR$/design-patterns/creationalDP/builder-1/builder-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-patterns/creationalDP/factory/factory.iml" filepath="$PROJECT_DIR$/design-patterns/creationalDP/factory/factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiThreading/helloWorld/helloWorld.iml" filepath="$PROJECT_DIR$/multiThreading/helloWorld/helloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiThreading/multiThreading.iml" filepath="$PROJECT_DIR$/multiThreading/multiThreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-patterns/creationalDP/prototype/prototype.iml" filepath="$PROJECT_DIR$/design-patterns/creationalDP/prototype/prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-patterns/creationalDP/singleton/singleton.iml" filepath="$PROJECT_DIR$/design-patterns/creationalDP/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-patterns/structuralDP/structuralDP.iml" filepath="$PROJECT_DIR$/design-patterns/structuralDP/structuralDP.iml" />
+    </modules>
+  </component>
+</project>
