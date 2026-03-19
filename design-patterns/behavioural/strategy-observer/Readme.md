@@ -11,10 +11,11 @@ Use case: Google Maps -> car bike walk -> if else violates SRP
 - create an interface (DIP) for these classes (parent and child) to talk to each other!
 - use factory DP (a very wide used coupling) -> because now we want the correct implementation of the interface based on the param! - so you get the right implementation.
 - now gmaps -> 
-findPath(to, from,mode){
+
+findPath(to, from,mode) {
     PC pc = new PCFactory(mode)
 }
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 Strategy DP rephrased:
 
 When multiple diff ways to do something - use an interface and implement it using diff classes for the diff behaviours!
@@ -27,7 +28,7 @@ Rainwater trapping problem:
 DIY!
 implement the solution using which solution you want
 https://github.com/Naman-Bhalla/lldSept2022/tree/master/src/main/java/designpatterns/strategy
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 Observer Design Pattern:
 In amazon order placing service - you have a lot of different services which you have segregated using facade DP.
 But now - orders are dynamic ie you might want to disable notifications, live tracking or offer some premium service for premium customers.
@@ -35,7 +36,7 @@ Pub/Sub Model -> you want to register services which are being enabled and not t
 
 #1 Create register/deregister methods in Amazon Service class, add them to list of subscribers, thats all - why? 
 #2 Register the subs -> NOT in main class - NEITHER via dependency injection but in their own constructors! - why?
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 Observer DP:
 When you may want to change what happens on occurrence of an event and decouple the code from where the event is generated to what gets done on event - consider using observer!
 
@@ -45,7 +46,7 @@ Note - amazon is a global singleton object
 DIY: read about observer
 doubts:
 If polymorphism pillar was not there, most of the design pattern wouldn't have existed
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 DIY:
 
 1. Rainwater trapping problem - using strategic
@@ -55,4 +56,4 @@ DIY:
 https://refactoring.guru/design-patterns/observer/typescript/example
 https://github.com/Naman-Bhalla/lldSept2022/tree/master/src/main/java/designpatterns/observer
 https://github.com/Naman-Bhalla/lldSept2022/tree/master/src/main/java/designpatterns/strategy
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 
 Pattern : something that repeats.
 Design: related to software design.
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 # Why learn?
 
 1. Shared vocab -> widely accepted.
@@ -18,7 +18,7 @@ Design: related to software design.
 - in a clean simple concise way
 
 GoF: Gang of Four - no invention just documentation.
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 # How? 
 * See for yourself :P 
 - These are divided into two categories - structural and creational.
@@ -36,7 +36,7 @@ GoF: Gang of Four - no invention just documentation.
 4. Pros and Cons
 
 What about designing Data Intensive Apps : HLD
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 # Criticism of patterns
 It seems like only lazy people haven’t criticized design patterns yet. Let’s take a look at the most typical arguments against using patterns.
 
@@ -50,4 +50,4 @@ Patterns try to systematize approaches that are already widely used. This unific
 3. Unjustified use
 If all you have is a hammer, everything looks like a nail.
 - This is the problem that haunts many novices who have just familiarized themselves with patterns. Having learned about patterns, they try to apply them everywhere, even in situations where simpler code would do just fine.
------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------

@@ -1,6 +1,7 @@
 Singleton DP:
 
 Allows you to restrict a class to have only one instance/object of it created at max.
+
 ------------------------------------------------------------------------------------------------
 1. Why would we want this?
 - suggestions: global configs, DB connections, Loggers.

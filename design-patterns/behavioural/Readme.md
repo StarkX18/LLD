@@ -4,9 +4,9 @@ These are design patterns that will deal with the lowest levels of design i gues
 
 Behavioural DP:
 
-1. Strategic(the most important)
+1. Strategic (the most important)
 2. Observer
-3. Command(not here, in case study)
+3. Command (not here, in case study)
 
 Research Papers
 https://content.interviewbit.com/research-papers/LLD1_2.pdf

@@ -19,7 +19,7 @@ Assume we dont / cant make or dont even know about copy constructor :
 # Ideal way
 The object we want to copy itself gives a method to copy it!
 eg:   Student s = ----
-          Student copy = s.copy()
+      Student copy = s.copy()
 
 Does it violate SRP?
 Its subjective! Prolly NO, prolly yes. WHY?

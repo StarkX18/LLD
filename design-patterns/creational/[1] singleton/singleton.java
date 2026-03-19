@@ -31,7 +31,7 @@ class singleton {
         System.out.println("Singleton created");
     }
 
-    public static getInstance(){
+    public static getInstance() {
         return instance;
     }
 }

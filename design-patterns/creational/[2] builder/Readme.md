@@ -3,6 +3,7 @@ What - a class somehow allows creation of only one instance
 Why - we don't need multiple objects - idk why - check again!
 --------------------------------------------------------------------------------------------------------------------------
 # How? 
+
 1. lazy loading - with if cases -> cant handle concurrency.
 2. eager loading - before class loads, already create -> cant handle configs/ environment variables -> but otherwise a good solution
 3. lazy loading WITH Double check locking -> handles configs, low compile time too.
@@ -18,13 +19,14 @@ Picking the second point first! -> need to apply validations BEFORE creating an 
 eg Scaler student
 1. grad_year<2022
 2. email, name and phone number
-*3. validations of combination attributes - grad_yr-age>1990 etc
+3. validations of combination attributes - grad_yr-age>1990 etc
+
 --------------------------------------------------------------------------------------------------------------------------
 How CAN we do this?
 
 1. In constructor : throw exceptions in constructor after validating!
    - problem - object is ALREADY created (not mentioned) in 1st line of constructor.
-   - But if you throw exception - the xcreated object is not reall assigned aqnd ois then collected by GC!
+   - But if you throw exception - the created object is not reall assigned and is then collected by GC!
 
 2. static method - class itself WONT do the validation but some outer fxn - like either client side etc!
 - might or might NOT be a good idea - so not generalisable
@@ -33,6 +35,7 @@ How CAN we do this?
 - called AFTER an  object is created, first of all
 - what for the case of multiple attribute validation?
 - if we want class to be immutable? cant use this! as setters are NOT created for such classes (along with pvt attributes)
+
 --------------------------------------------------------------------------------------------------------------------------
 * Too many attributes - 
 
@@ -57,6 +60,7 @@ Basically not even a single problem is solved!
 
 1. Whatever validation - do before object creation.
 2. The solution of telescopic constructor made client code unreadable!
+
 --------------------------------------------------------------------------------------------------------------------------
 # Problems:
 
